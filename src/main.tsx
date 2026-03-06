@@ -1,23 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 
-declare global {
-  interface Window {
-    // Adicione quaisquer propriedades globais se necessário
-  }
-}
-
-const renderApp = (): void => {
-  ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-      <Router>
-        <App />
-      </Router>
-    </React.StrictMode>
-  );
+const renderApp = () => {
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    );
 };
 
 renderApp();
